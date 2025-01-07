@@ -6,11 +6,11 @@
   --background: #f9fafb;
   --foreground: #171717;
 }
-
+/* 나중에 다크모드 만들때 쓸 것 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f9fafb;
+    --foreground: #171717;
   }
 }
 

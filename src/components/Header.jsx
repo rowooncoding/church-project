@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 function Header() {
     return (
-        <div className='flex items-start justify-center h-screen'>
+        <div className='flex items-start justify-center mt-10'>
             <Image 
-                src="/selfmade-ahabalogo.png"
-                    alt="Not fount Image"
-                width={1200}
-                height={400}
+                src="/selfmade-ahabalogo2.png"
+                alt="Not fount Image"
+                width={700}
+                height={10}
+                layout="intrinsic"
             />
         </div>
-            
     )
 }
 
