@@ -3,7 +3,7 @@ import { React } from 'react';
 
 function FooterBanner () {
     return (
-        <div className="relative w-full h-[400px]">
+        <div className="relative w-full h-[400px] mt-5">
             <Image
                 src='/time-banner.png'
                 alt='예배시간 이미지'
