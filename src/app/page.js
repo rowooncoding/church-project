@@ -1,3 +1,4 @@
+import FooterBanner from '@/components/FooterBanner';
 import Header from '@/components/Header';
 import HeaderNav from '@/components/HeaderNav';
 import Main from '@/components/Main';
@@ -10,6 +11,7 @@ export default function Page() {
       <Header />
       <NavBar />
       <Main />
+      <FooterBanner />
     </>
   )
 }
