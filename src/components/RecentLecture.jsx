@@ -9,16 +9,31 @@ import YouTube from 'react-youtube';
  */
 function RecentLecture () {
     return (
-        <YouTube 
-            videoId='wZPkClqUgIk'
-            opts={{
-                width: "670",
-                height: "400",
-                playerVars: {
-                  autoplay: 0, //자동재생 O
-                },
-            }}
-        />
+        <div className='relative px-4 py-6'>
+            {/* 좌측 상단 "공지사항" 텍스트 */}
+            <h1 className="absolute top-4 left-4 text-2xl font-bold text-[#6B6B6B]">
+                금주의 말씀
+            </h1>
+        
+            {/* 우측 상단 "더보기" 버튼 */}
+            <button className="absolute top-4 right-4 bg-[#6B6B6B] text-white px-3 py-1 rounded hover:bg-[#4A4A4A]">
+                더보기
+            </button>
+
+            <div className='mt-10'>
+                <YouTube 
+                    videoId='wZPkClqUgIk'
+                    opts={{
+                        width: "670",
+                        height: "400",
+                        playerVars: {
+                        autoplay: 0, //자동재생 O
+                        },
+                    }}
+                />
+            </div>
+            
+        </div>        
     );
 };
 
