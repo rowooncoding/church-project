@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import RecentLecture from './RecentLecture';
 import MainNotice from './MainNotice';
+
 function Main() {
     const images = [
         { src: '/bread-drink.jpg', alt: 'Holy Communion Image', text: '주의 만찬' },
