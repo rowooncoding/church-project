@@ -4,7 +4,6 @@ import HeaderNav from '@/components/HeaderNav';
 import { useRouter } from 'next/navigation';
 import { React, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setUsername } from '../redux/slices/usernameSlice';
 import { setConfirmPassword, setPassword } from '../redux/slices/passwordSlice';
 import { setEmail } from '../redux/slices/emailSlices';
 
@@ -47,9 +46,6 @@ function SignUp() {
         const { name, value } = e.target;
 
         switch (name) {
-            case "username":
-                dispatch(setUsername(value));
-                break;
             case "email":
                 dispatch(setEmail(value));
                 break;
