@@ -40,19 +40,7 @@ function SignUp() {
 
     // 비밀번호 유효성 검사
     const handlerPasswordChange = (e) => {
-        const value = e.target.value;
-
         dispatch(setPassword(e.target.value));
-
-        if (typingTimeout) {
-            clearTimeout(typingTimeout);
-        }
-
-        const timeout = setTimeout(() => {
-            dispatch(setValidatePassword());
-        }, 1000);
-
-        setTypingTimeout(timeout);
     };
 
     return (
@@ -72,7 +60,7 @@ function SignUp() {
                             value={username}
                             placeholder="영문자만 입력 가능합니다."
                             onChange={handlerUsernameChange}
-                            className={`p-2 w-2/3 border focus:outline-none ${
+                            className={`p-2 w-2/3 border focus:outline-none placeholder:text-xs ${
                                 isValid
                                     ? "border-gray-400 focus:border-gray-500"
                                     : "border-red-500 focus:border-red-500"
@@ -95,7 +83,6 @@ function SignUp() {
                             id="password"
                             value={password}
                             name="password"
-                            placeholder="비밀번호 입력"
                             onChange={handlerPasswordChange}
                             className={`p-2 w-2/3 border focus:outline-none ${
                                 isPasswordValid
@@ -140,7 +127,8 @@ function SignUp() {
                         <input
                             type="email"
                             name="email"
-                            className="p-2 w-2/3 border border-gray-400 focus:outline-none focus:border-gray-500"
+                            placeholder="이메일 형식에 맞춰서 입력해주세요"
+                            className="p-2 w-2/3 border border-gray-400 focus:outline-none placeholder:text-xs focus:border-gray-500"
                             required
                         />
                     </div>

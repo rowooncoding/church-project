@@ -15,9 +15,6 @@ const passwordSlice = createSlice({
         // 입력값 업데이트
         setPassword: (state, action) => {
             state.password = action.payload;
-        },
-        // 유효성 검사 실행
-        setValidatePassword: (state) => {
             const isValidPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(state.password);
             state.isValid = isValidPassword;
             state.showPasswordTooltip = !isValidPassword;
